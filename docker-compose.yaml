@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  builder:
+    container_name: packaging-ubuntu-19.04
+    image: ilmuflone/packaging-ubuntu-19.04:0.1.0
+    volumes:
+      - ./dependencies:/dependencies:ro
+      - ./output:/output
+      - ./sources:/source-ro:ro
+
